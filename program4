@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    if(num<50)
+    {
+        printf("SUCCESS");
+    }else
+    {
+        printf("FAILUR");
+    }
+
+    return 0;
+}
