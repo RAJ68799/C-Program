@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main()
+{
+    int num,dub;
+    int digit=0, pos;
+    
+    num = 1221;
+    pos = 1;
+    dub=num;
+    while (num > pos)
+    {
+        digit = ((num / pos)%10)+digit*10;
+        //printf("%d", digit);
+        pos*=10;
+    }
+    if(dub==digit)
+    {
+        printf("yes\n");
+    }else
+    {
+        printf("no\n");
+    }
+    printf("%d", digit);
+    // 2step -> MSD position
+    // /10 one step reduce 
+   
+    return 0;
+}
