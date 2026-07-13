@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    int digit, pos;
+
+    num = 123456;
+    pos = 1;
+    while (num > pos)
+    {
+        //digit = (num / pos)%10;
+        //printf("%d\n", digit);
+        pos*=10;
+    }
+    // 2step -> MSD position
+    // /10 one step reduce 
+    pos/=10;
+    while (pos >=1 )
+    {
+        digit = (num / pos)%10;
+        
+        pos/=10;
+        switch(digit)
+        {
+        case 1:
+            printf("one ");
+        break;
+        case 2:
+            printf("two ");
+        break;
+        case 3:
+            printf("three ");
+        break;
+        case 4:
+            printf("fouth ");
+        break;
+        case 5:
+            printf("five ");
+        break;
+        case 6:
+            printf("six ");
+        break;
+        case 7:
+            printf("seven ");
+        break;
+        case 8:
+            printf("eight ");
+        break;
+        case 9:
+            printf("nine ");
+        break;
+        }
+        
+    }
+   printf("%d ", num);
+    
+    return 0;
+}
