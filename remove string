@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "e12f35g58";
+    int itr = 0, itr1 = 0;
+
+    while (str[itr] != '\0')
+    {
+        if (str[itr] == 'e')
+        {
+            if (str[itr + 1] == 'f')
+            {
+                itr += 2;
+                continue;
+            }
+            else
+            {
+                str[itr1] = str[itr];
+                itr1++;
+                itr++;
+            }
+        }
+        else if (str[itr] == '5')
+        {
+            if (str[itr + 1] == '6')
+            {
+                itr += 2;
+                continue;
+            }
+            else
+            {
+                str[itr1] = str[itr];
+                itr1++;
+                itr++;
+            }
+        }
+        else if (str[itr] == 'g')
+        {
+            itr++;
+            continue;
+        }
+        else
+        {
+            str[itr1] = str[itr];
+            itr1++;
+            itr++;
+        }
+    }
+
+    str[itr1] = '\0';
+
+    printf("%s\n", str);
+
+    return 0;
+}
