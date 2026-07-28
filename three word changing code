@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+    char w1[20], w2[20], w3[20];
+    int i, count = 0;
+
+    scanf("%s %s %s", w1, w2, w3);
+
+    
+    for(i = 0; w1[i] != '\0'; i++)
+    {
+        if(w1[i]=='a'||w1[i]=='e'||w1[i]=='i'||w1[i]=='o'||w1[i]=='u'||
+           w1[i]=='A'||w1[i]=='E'||w1[i]=='I'||w1[i]=='O'||w1[i]=='U')
+        {
+            w1[i] = '%';
+            break;
+        }
+    }
+
+    
+    for(i = 0; w2[i] != '\0'; i++)
+    {
+        if(!((w2[i]=='a'||w2[i]=='e'||w2[i]=='i'||w2[i]=='o'||w2[i]=='u')||
+             (w2[i]=='A'||w2[i]=='E'||w2[i]=='I'||w2[i]=='O'||w2[i]=='U')))
+        {
+            count++;
+            if(count == 1)
+            {
+                w2[i] = '#';
+                break;
+            }
+        }
+    }
+
+    
+    for(i = 0; w3[i] != '\0'; i++)
+    {
+        if(w3[i] >= 'a' && w3[i] <= 'z')
+            w3[i] = w3[i] - 32;
+    }
+
+    printf("%s %s %s", w1, w2, w3);
+
+    return 0;
+}
