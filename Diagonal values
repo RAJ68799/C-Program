@@ -1,0 +1,98 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <stdio.h>
+int main()
+{
+   int arr[4][4]={{1,2,3},{4,5,6},{7,8,9}};
+   if(3%2!=0)
+   {
+        for(int itr=0;itr<2;itr++)
+        {
+            int ind=0,ind1=itr;
+            while((ind<3-1)&&(ind1>=0))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind++;
+                ind1--;
+            }
+        }
+        int ind=2,ind1=0;
+            while((ind>=0)&&(ind1<3))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind--;
+                ind1++;
+            }
+        for(int itr=1;itr<3;itr++)
+        {
+            int ind=itr,ind1=2;
+            while((ind<3)&&(ind1>=0))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind++;
+                ind1--;
+            }
+        }
+        
+   }else{
+       for(int itr=0;itr<2;itr++)
+        {
+            int ind=0,ind1=itr;
+            while((ind<3-1)&&(ind1>=0))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind++;
+                ind1--;
+            }
+        }
+        {
+            int ind=2,ind1=0;
+            while((ind>=0)&&(ind1<3))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind--;
+                ind1++;
+            }
+        }
+        int ind=3,ind1=0;
+            while((ind>=0)&&(ind1<4))
+            {
+                printf("%d ",arr[ind1][ind]);
+                ind--;
+                ind1++;
+            }
+        {
+            int ind=3,ind1=1;
+            while((ind>=0)&&(ind1<4))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind--;
+                ind1++;
+            }
+        }
+        for(int itr=2;itr<4;itr++)
+        {
+            int ind=itr,ind1=3;
+            while((ind<4)&&(ind1>=0))
+            {
+                printf("%d ",arr[ind][ind1]);
+                ind++;
+                ind1--;
+            }
+        }
+        
+   }
+}
